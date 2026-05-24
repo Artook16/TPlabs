@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\Desktop\\тп 2 курс\\Laba 2 TP\\Лабораторная работа №2 тп\\Лабораторная работа №2\\Лабораторная работа №2\\Лабораторная работа №2.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Desktop\\тп 2 курс\\Laba 1 TP_Git\\Лабораторная работа №2\\Лабораторная работа №2\\Лабораторная работа №2.csproj",
       "projectName": "Лабораторная работа №2",
-      "projectPath": "C:\\Users\\user\\Desktop\\тп 2 курс\\Laba 2 TP\\Лабораторная работа №2 тп\\Лабораторная работа №2\\Лабораторная работа №2\\Лабораторная работа №2.csproj",
+      "projectPath": "C:\\Users\\user\\Desktop\\тп 2 курс\\Laba 1 TP_Git\\Лабораторная работа №2\\Лабораторная работа №2\\Лабораторная работа №2.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\Desktop\\тп 2 курс\\Laba 2 TP\\Лабораторная работа №2 тп\\Лабораторная работа №2\\Лабораторная работа №2\\obj\\",
+      "outputPath": "C:\\Users\\user\\Desktop\\тп 2 курс\\Laba 1 TP_Git\\Лабораторная работа №2\\Лабораторная работа №2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
