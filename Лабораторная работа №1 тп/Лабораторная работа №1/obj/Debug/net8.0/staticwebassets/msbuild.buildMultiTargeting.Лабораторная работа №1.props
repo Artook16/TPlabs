@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Лабораторная работа №1.props" />
+</Project>
