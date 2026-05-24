@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Лабораторная_работа__2.Models.ClientModel>
+@using Лабораторная_работа__2.Helpers
+@using Microsoft.AspNetCore.Html
+@{
+    ViewBag.Title = "Список клиентов";
+    bool useExternal = TempData["UseExternalHelper"] != null && (bool)TempData["UseExternalHelper"];
+}
+
+@functions {
+    public IHtmlContent RenderClientCard(string fullName, string phone, string email, bool isProcessed)
+    {
+        string statusClass = isProcessed ? "processed" : "notprocessed";
+        string statusText = isProcessed ? "Обработан" : "Не обработан";
+        string html = $@"<div class='client-card {statusClass}'>
+                            <h4>{fullName}</h4>
+                            <p>Телефон: {phone}</p>
+                            <p>Email: {email}</p>
+                            <p>Статус: {statusText}</p>
+                         </div>";
+        return new HtmlString(html);
+    }
+}
+
+<h2>Список клиентов</h2>
+
+<p>
+    @Html.ActionLink("Добавить нового клиента", "Create")
+</p>
+
+@if (useExternal)
+{
+    foreach (var item in Model)
+    {
+        @Html.ClientCard($"{item.LastName} {item.FirstName} {item.Patronymic}", item.Phone, item.Email, item.IsProcessed)
+    }
+}
+else
+{
+    foreach (var item in Model)
+    {
+        @RenderClientCard($"{item.LastName} {item.FirstName} {item.Patronymic}", item.Phone, item.Email, item.IsProcessed)
+    }
+}

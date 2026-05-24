@@ -1,0 +1,37 @@
+﻿@model Лабораторная_работа__2.Models.ClientModel
+
+@{
+    ViewBag.Title = "Редактирование";
+}
+
+<h2>Редактирование</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(m => m.Id) 
+    @Html.LabelFor(m => m.LastName)
+    @Html.EditorFor(m => m.LastName)
+    <br />
+
+    @Html.LabelFor(m => m.FirstName)
+    @Html.EditorFor(m => m.FirstName)
+    <br />
+
+    @Html.LabelFor(m => m.Patronymic)
+    @Html.EditorFor(m => m.Patronymic)
+    <br />
+
+    @Html.LabelFor(m => m.Phone)
+    @Html.EditorFor(m => m.Phone)
+    <br />
+
+    @Html.LabelFor(m => m.Email)
+    @Html.EditorFor(m => m.Email)
+    <br />
+
+    @Html.LabelFor(m => m.IsProcessed)
+    @Html.EditorFor(m => m.IsProcessed)
+    <br />
+
+    <input type="submit" value="Сохранить" />
+}

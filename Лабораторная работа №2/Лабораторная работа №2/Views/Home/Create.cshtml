@@ -1,0 +1,69 @@
+﻿@model Лабораторная_работа__2.Models.ClientModel
+
+@{
+    ViewBag.Title = "Добавление клиента";
+}
+
+<h2>
+    Добавить клиента
+    <span id="allFieldsFilledMessage" style="font-size: 0.8em; color: green; font-weight: normal;"></span>
+</h2>
+
+<form asp-action="Create" method="post" id="clientForm">
+    <div>
+        <label asp-for="LastName"></label>
+        <input asp-for="LastName" />
+    </div>
+    <div>
+        <label asp-for="FirstName"></label>
+        <input asp-for="FirstName" />
+    </div>
+    <div>
+        <label asp-for="Patronymic"></label>
+        <input asp-for="Patronymic" />
+    </div>
+    <div>
+        <label asp-for="Phone"></label>
+        <input asp-for="Phone" />
+    </div>
+    <div>
+        <label asp-for="Email"></label>
+        <input asp-for="Email" />
+    </div>
+    <div>
+        <label asp-for="IsProcessed"></label>
+        <input asp-for="IsProcessed" type="checkbox" />
+    </div>
+
+    <button type="submit" id="saveButton">Сохранить</button>
+</form>
+
+@section Scripts {
+    <script>
+        function checkAllFieldsFilled() {
+            const form = document.getElementById('clientForm');
+            const textInputs = form.querySelectorAll('input:not([type="checkbox"]):not([type="submit"]), textarea');
+            let allFilled = true;
+            textInputs.forEach(input => {
+                if (!input.value.trim()) {
+                    allFilled = false;
+                }
+            });
+            const messageSpan = document.getElementById('allFieldsFilledMessage');
+            if (allFilled) {
+                messageSpan.textContent = '(все поля заполнены✅)';
+            } else {
+                messageSpan.textContent = '';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('clientForm');
+            const inputs = form.querySelectorAll('input:not([type="checkbox"]):not([type="submit"]), textarea');
+            inputs.forEach(input => {
+                input.addEventListener('input', checkAllFieldsFilled);
+            });
+            checkAllFieldsFilled();
+        });
+    </script>
+}

@@ -1,0 +1,15 @@
+﻿@model Лабораторная_работа__2.Models.ClientModel
+
+@{
+    ViewBag.Title = "Просмотр клиента";
+}
+
+<h2>Просмотр клиента</h2>
+
+@Html.LabelForModel("Данные клиента:")
+<hr />
+@Html.DisplayForModel()
+
+<p>
+    @Html.ActionLink("Назад к списку", "Index")
+</p>
